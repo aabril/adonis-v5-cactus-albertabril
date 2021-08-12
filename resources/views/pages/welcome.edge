@@ -3,12 +3,11 @@
 
 @section('body')
   @include('partials/header')
-  @if(user)
-    <div>Logged-in</div>
-  @end
-
   @if(auth && auth.isLoggedIn)
-    <p> Hello {{ auth.user.email }} </p>
+    <p> 
+      Hello {{ auth.user.email }} 
+      <a href="/logout">(logout)</a>
+    </p>
   @endif
 
   @include('partials/about')

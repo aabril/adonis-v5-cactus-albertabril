@@ -1,0 +1,21 @@
+@layout('layouts/cactus')
+@set('title', 'Everyday')
+@set('linkurl', '/everyday')
+@set('linkname', 'Everyday')
+
+@section('body')
+  @include('partials/header')
+  <section id="everyday">
+    <span class="h1">
+        <a href={{ linkurl }}>
+            {{ linkname }}
+        </a>
+    </span>
+  </section>
+  <section id="everyday_content">
+    The goal of this site is to commit to publish an everyday work.
+    I will be focusing on doing GitHub commits or Pull Requests.
+    Either is a contribution, some work of my own, learnings or research documentation.
+  </section>
+  @include('partials/footer')
+@end

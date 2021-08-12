@@ -1,13 +1,13 @@
 import View from '@ioc:Adonis/Core/View'
 
 export default class LoginController {
-  public async get() {
+  public async loginGet() {
     const data = {}
     const html = await View.render('pages/login/get', data)
     return html
   }
 
-  public async post({ auth, request, response }) {
+  public async loginPost({ auth, request, response }) {
     const email = request.input('email')
     const password = request.input('password')
 
@@ -18,4 +18,10 @@ export default class LoginController {
       return response.badRequest('Invalid credentials')
     }
   }
+
+  public async logoutGet ({ auth, response }) {
+    await auth.use('web').logout()
+    response.redirect('/')
+  }
+
 }
