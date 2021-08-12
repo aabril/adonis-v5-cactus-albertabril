@@ -21,9 +21,11 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/', 'WelcomeController.index')
+
 Route.get('/about', 'AboutController.index')
 Route.get('/writings', 'WritingsController.index')
 Route.get('/tags', 'TagsController.index')
+Route.get('/commit', 'CommitController.index')
 
 Route.get('/login', 'LoginController.get')
 Route.post('/login', 'LoginController.post')
