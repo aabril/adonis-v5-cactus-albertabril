@@ -57,7 +57,7 @@ export default class WelcomeController {
       data["auth"] = auth
     }
 
-    const html = await View.render('pages/welcome', data)
+    const html = await View.render('pages/welcome/index', data)
     return html
   }
 }
