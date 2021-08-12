@@ -1,0 +1,23 @@
+@layout('layouts/cactus')
+@set('title', 'Login')
+@set('linkurl', '/login')
+@set('linkname', 'Login')
+@set('label_email', 'E-mail')
+@set('label_password', 'Password')
+
+@section('body')
+  @include('partials/header')
+  <section id=writings>
+    <span class=h1>
+        <a href={{ linkurl }}>
+            {{ linkname }}
+        </a>
+    </span>
+
+    <div>
+        Saved
+    </div>
+
+    </section>
+  @include('partials/footer')
+@end

@@ -1,0 +1,27 @@
+@layout('layouts/cactus')
+@set('title', 'Login')
+@set('linkurl', '/login')
+@set('linkname', 'Login')
+@set('label_email', 'E-mail')
+@set('label_password', 'Password')
+
+@section('body')
+  @include('partials/header')
+  <section id=writings>
+    <span class=h1>
+        <a href={{ linkurl }}>
+            {{ linkname }}
+        </a>
+    </span>
+
+    <form action="/login" method="post">
+      <label for="email">{{ label_email }}</label><br>
+      <input type="email" id="email" name="email"><br>
+      <label for="password">{{ label_password }}</label><br>
+      <input type="password" id="password" name="password"><br>
+      <input type="submit" value="Submit" style="margin-top: 10px;">
+    </form> 
+
+    </section>
+  @include('partials/footer')
+@end
