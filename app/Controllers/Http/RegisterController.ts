@@ -1,0 +1,22 @@
+import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
+import View from '@ioc:Adonis/Core/View'
+
+export default class LoginController {
+  public async get(ctx: HttpContextContract) {
+    const data = {}
+    const html = await View.render('login/get', data)
+    return html
+  }
+
+  public async post({ auth, request, response }) {
+    const email = request.input('email')
+    const password = request.input('password')
+
+    try {
+      await auth.use('web').attempt(email, password)
+      response.redirect('/')
+    } catch {
+      return response.badRequest('Invalid credentials')
+    }
+  }
+}
