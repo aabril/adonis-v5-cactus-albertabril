@@ -1,11 +1,10 @@
 <section id=projects>
     <span class=h1><a href=https://github.com/gohugoio>Projects</a></span>
     <ul class=project-list>
+        @each(project in projects)
         <li class=project-item>
-            <a href=https://gohugo.io />Hugo</a>: The world’s fastest framework for building websites.
+            <a href={{ project.linkurl }} />{{ project.linkname }}</a>: {{ project.linkdesc }}
         </li>
-        <li class=project-item>
-            <a href=https://github.com/gohugoio/hugoThemes>Hugo Themes</a>: A curated directory of Hugo themes
-        </li>
+        @end
     </ul>
 </section>

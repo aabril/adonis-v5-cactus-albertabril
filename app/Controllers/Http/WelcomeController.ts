@@ -27,12 +27,26 @@ const writings = [
     'linkname': 'Programming Language - Subtyping'
   }
 ]
+const projects = [
+  {
+    "linkurl": "/projects/hugo",
+    "linkname": "Hugo",
+    "linkdesc": "The world’s fastest framework for building websites."
+  },
+  {
+    "linkurl": "/projects/hugo-themes",
+    "linkname": "Hugo Themes",
+    "linkdesc": "A curated directory of Hugo themes."
+  },
+
+]
 
 export default class WelcomeController {
   public async index(ctx: HttpContextContract) {
 
     const html = await View.render('welcome', {
-      writings: writings
+      writings,
+      projects
     })
     
     return html
