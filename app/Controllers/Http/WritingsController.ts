@@ -4,7 +4,7 @@ import View from '@ioc:Adonis/Core/View'
 export default class WritingsController {
   public async index(ctx: HttpContextContract) {
     const data = {}
-    const html = await View.render('writings', data)
+    const html = await View.render('pages/writings', data)
     return html
   }
 }

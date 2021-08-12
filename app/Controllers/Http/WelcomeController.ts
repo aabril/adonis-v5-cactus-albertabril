@@ -44,7 +44,7 @@ const projects = [
 export default class WelcomeController {
   public async index(ctx: HttpContextContract) {
 
-    const html = await View.render('welcome', {
+    const html = await View.render('pages/welcome', {
       writings,
       projects
     })

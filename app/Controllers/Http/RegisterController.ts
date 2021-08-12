@@ -4,7 +4,7 @@ import View from '@ioc:Adonis/Core/View'
 export default class LoginController {
   public async get(ctx: HttpContextContract) {
     const data = {}
-    const html = await View.render('login/get', data)
+    const html = await View.render('pages/login/get', data)
     return html
   }
 
