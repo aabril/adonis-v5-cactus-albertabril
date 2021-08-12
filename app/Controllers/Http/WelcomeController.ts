@@ -5,25 +5,25 @@ const writings = [
   {
     'datetime': '2021-06-27 09:00:00 +0000 UTC',
     'datestr':  '2021-06-27',
-    'link':     'https://www.takuzen.me/hugo-theme-cactus/posts/code-block-test',
+    'link':     '/posts/code-block-test',
     'linkname': 'Code Block Test'
   },
   {
     'datetime': '2020-06-06 09:00:00 +0000 UTC',
     'datestr':  '2020-06-06',
-    'link':     'https://www.takuzen.me/hugo-theme-cactus/posts/2020-06-06-changes-in-java-string',
+    'link':     '/posts/2020-06-06-changes-in-java-string',
     'linkname': 'Changes to String in java (from 1.7.0_06)'
   },
   {
     'datetime': '2020-05-01 09:00:00 +0000 UTC',
     'datestr':  '2020-05-01',
-    'link':     'https://www.takuzen.me/hugo-theme-cactus/posts/2020-05-01-algorithms-graphs',
+    'link':     '/posts/2020-05-01-algorithms-graphs',
     'linkname': 'Algorithms - Graphs'
   },
   {
     'datetime': '2020-04-29 09:00:00 +0000 UTC',
     'datestr':  '2020-04-29',
-    'link':     'https://www.takuzen.me/hugo-theme-cactus/posts/2020-04-29-subtyping',
+    'link':     '/posts/2020-04-29-subtyping',
     'linkname': 'Programming Language - Subtyping'
   }
 ]
