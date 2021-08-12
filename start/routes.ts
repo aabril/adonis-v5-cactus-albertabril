@@ -20,8 +20,7 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-// Route.get('/', async ({ view }) => {
-//   return view.render('welcome')
-// })
-
 Route.get('/', 'WelcomeController.index')
+Route.get('/about', 'AboutController.index')
+Route.get('/writings', 'WritingsController.index')
+Route.get('/tags', 'TagsController.index')

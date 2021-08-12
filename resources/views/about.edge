@@ -1,0 +1,16 @@
+@layout('layouts/cactus')
+@set('title', 'About')
+@set('linkurl', '/about')
+@set('linkname', 'About')
+
+@section('body')
+  @include('partials/header')
+  <section id=writings>
+    <span class=h1>
+        <a href={{ linkurl }}>
+            {{ linkname }}
+        </a>
+    </span>
+    </section>
+  @include('partials/footer')
+@end
