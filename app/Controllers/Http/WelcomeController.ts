@@ -1,4 +1,3 @@
-import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import View from '@ioc:Adonis/Core/View'
 
 const writings = [
@@ -42,13 +41,23 @@ const projects = [
 ]
 
 export default class WelcomeController {
-  public async index(ctx: HttpContextContract) {
-
-    const html = await View.render('pages/welcome', {
+  public async index({auth}) {
+    const data = {
       writings,
       projects
-    })
-    
+    }
+
+    // this will keep away any user that has not been authenticated
+    // await auth.use('web').authenticate()
+
+    // this allows everyuser to access
+    // and also add extras to authenticated users
+    await auth.use('web').check()
+    if (auth.use('web').isLoggedIn) {
+      data["auth"] = auth
+    }
+
+    const html = await View.render('pages/welcome', data)
     return html
   }
 }
