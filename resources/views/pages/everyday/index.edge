@@ -2,6 +2,7 @@
 @set('title', 'Everyday')
 @set('linkurl', '/everyday')
 @set('linkname', 'Everyday')
+@set('h1title', 'albertabril.com')
 
 @section('body')
   @include('partials/header')
@@ -17,5 +18,24 @@
     I will be focusing on doing GitHub commits or Pull Requests.
     Either is a contribution, some work of my own, learnings or research documentation.
   </section>
+  <section id=writing>
+    <span class=h1><a href="/posts">Dayly</a></span>
+    <ul class=post-list>
+      @each(day in days)
+        <li class=post-item>
+          <div class=meta>
+            <time datetime="{{ day.datetime }}" itemprop=datePublished>
+              {{ day.datestr }}
+            </time>
+          </div>
+          <span>
+            <a href={{ day.link }} />
+              {{ day.linkname }}
+            </a>
+          </span>
+        </li>
+      @end
+    </ul>
+</section>
   @include('partials/footer')
 @end
