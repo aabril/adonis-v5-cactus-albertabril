@@ -24,4 +24,12 @@ export default class CommitController {
     const html = await View.render('pages/everyday/index', data)
     return html
   }
+
+  public async month({ params } {
+    const data = {
+      days
+    }
+    const html = await View.render('pages/everyday/month', data)
+    return html
+  })
 }
