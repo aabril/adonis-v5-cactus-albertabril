@@ -2,6 +2,19 @@
 @set('title', 'Home page')
 
 @section('body')
+
+  <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+  <script>
+    const socket = io()
+    socket.on('news', (data) => {
+      // print on the client side
+      // console.log(data)
+
+      // send to the server via socket
+      // socket.emit('an_event', { my: 'data' })
+    })
+  </script>
+
   @include('partials/header')
   @if(auth && auth.isLoggedIn)
     <p> 
