@@ -25,7 +25,13 @@ Route.get('/', 'WelcomeController.index')
 Route.get('/about', 'AboutController.index')
 Route.get('/writings', 'WritingsController.index')
 Route.get('/tags', 'TagsController.index')
+
 Route.get('/everyday', 'EverydayController.index')
+Route.get('/everyday/:month', 'EverydayController.month')
+Route.get('/everyday/:month/:day', 'EverydayController.day')
+
+
+
 
 Route.get('/login', 'LoginController.loginGet')
 Route.post('/login', 'LoginController.loginPost')
