@@ -1,4 +1,4 @@
-import Ws from 'app/Services/Ws'
+import Ws from 'App/Services/Ws'
 Ws.boot()
 
 /**
